@@ -1,0 +1,46 @@
+.footer-subscription {
+    width: 570px;
+    margin-left: 93px;
+
+    &__icon {
+            margin-left: 10px;
+        }
+    }
+
+.footer__button {
+    display: flex;
+    align-items: center;
+    padding-left: 29px;
+    width: 200px;
+}
+
+.footer-subscription__input {
+    width: 358px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 16px;
+    margin-right: 12px;
+
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: transparent;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    color: rgba(255, 255, 255, 0.6);
+    outline: none;
+
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+            border: 1px solid;
+            border-color: $accent-text-color;
+            cursor: pointer;
+        }      
+}
+
+.footer-mailing {
+    display: flex;
+}

@@ -1,0 +1,25 @@
+.button {
+    border-radius: 4px;
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    color: $accent-white-color;
+    background-color: $accent-text-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+
+    cursor: pointer;
+}
+
+.hero__button {
+@extend .button;
+
+    padding-left: 32px;
+    padding-right: 32px;
+}

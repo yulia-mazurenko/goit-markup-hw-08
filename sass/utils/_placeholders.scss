@@ -1,0 +1,34 @@
+%list {
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+}
+
+%link {
+    text-decoration: none;
+}
+
+%section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+    }
+
+%section__title {
+            margin-top: 0;
+            margin-bottom: 50px;
+    
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 1.17;
+            text-align: center;
+        }
+
+.container {
+            width: 1200px;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin: 0 auto;
+            }
+

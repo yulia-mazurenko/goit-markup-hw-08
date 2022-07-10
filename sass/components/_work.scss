@@ -1,0 +1,43 @@
+.work {
+    @extend %section;
+   
+    padding-top: 0;
+
+    &__title {
+        @extend %section__title;
+    }
+
+    &__list {
+            display: flex;
+            @extend %list;
+        }
+    &__item {
+        position: relative;
+    
+        margin-right: 30px;
+    }
+    &__item:last-child {
+        margin-right: 0;
+    }
+    &__subtitle {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        padding-top: 27px;
+        padding-bottom: 27px;
+    
+        color: $accent-white-color;
+    }
+    &__subtitle-position {
+        position: absolute;
+        display: block;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: rgba(47, 48, 58, 0.8);
+    }
+}

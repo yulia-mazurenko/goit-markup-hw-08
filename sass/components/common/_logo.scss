@@ -1,0 +1,32 @@
+.logo {
+    color: $main-text-color;
+    font-family: "Raleway", sans-serif;
+
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.11;
+    text-decoration: none;
+}
+
+.logo__text--accent {
+    color: $accent-text-color;
+}
+
+.page-header__logo { 
+    
+    display: block;
+    margin-right: 93px;
+    padding-top: 24px;
+    padding-bottom: 25px;
+}
+
+.page-footer__logo {
+   
+    display: inline-block;
+    margin-bottom: 20px;
+
+    &--accent {
+    color: $accent-white-color;
+    }
+}
+

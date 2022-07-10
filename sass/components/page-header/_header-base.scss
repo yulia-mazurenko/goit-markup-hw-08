@@ -1,0 +1,10 @@
+.page-header {
+  border-bottom: 1px solid #ececec;
+
+  &__item {
+      display: flex;
+      align-items: center;    
+    }
+        @extend .container;
+}
+

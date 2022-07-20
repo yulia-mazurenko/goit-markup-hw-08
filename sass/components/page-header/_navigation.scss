@@ -1,29 +1,45 @@
 .nav {
-    display: flex;
 
-    &__list {
+    @media screen and (max-width: 767px) {
+        margin-bottom: auto;
+    }
+
+    @media screen and (min-width: $tablet) {
+        margin-right: 84px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-right: 305px;
+    }
+    
+     &__list {
+
+        @media screen and (min-width: $tablet) {
             display: flex;
             align-items: center;
-
+            }
+            
             @extend %list;
         }
-    &__item {
+
+    &__item:not(:last-child) {
+        @media screen and (min-width: $tablet) {
             margin-right: 50px;
-        }
-    &__item:last-child {
-        margin-right: 0;
-    }
+        }        
+
+        @media screen and (max-width: 767px) {
+            margin-bottom: 32px;
+        }  
+   
+}
 }
 
 .nav__link {
-    padding-top: 32px;
-    padding-bottom: 32px;
-
     color: $main-text-color;
 
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+    font-size: 40px;
+    line-height: calc(47 / 40);
     letter-spacing: 0.02em;
     text-decoration: none;
 
@@ -34,14 +50,22 @@
             color: $accent-text-color;
         }
         @extend %link;
+
+    @media screen and (min-width: $tablet) {
+        padding-top: 32px;
+        padding-bottom: 32px;
+        font-size: 14px;
+        line-height: 1.14;
+    }
 }
 
 .nav__link--current {
-    position: relative;
-
     color: $accent-text-color;
 
-    &::after {
+    @media screen and (min-width: $tablet) {
+        position: relative;
+
+        &::after {
             position: absolute;
             content: "";
             display: block;
@@ -50,8 +74,54 @@
             border-radius: 2px;
             bottom: 1px;
             left: 0;
-    
+
             background-color: $accent-text-color;
-        }
+    }
+    }   
 }
+
+.header-social {
+   
+    display: flex;
+    flex-wrap: wrap;
+
+    @extend %list;
+
+    @media screen and (min-width: $tablet) {
+        display: none;
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 20px;
+    }
+}
+
+.header-social__link {
+
+        @extend %link;
+
+        position: relative;
+        
+        font-weight: 500;
+        font-size: 18px;
+        line-height: calc(22 / 18);
+        letter-spacing: 0.02em;
+    
+        color: $accent-text-color;    
+    }
+
+.header-social__item:not(:last-child) {
+   
+    .header-social__link::after {
+        position: absolute;
+        top: 0;
+        right: -10px;
+        content: "";
+        display: block;
+        width: 1px;
+        height: 20px;
+        background-color: rgba(33, 33, 33, 0.2);
+    }
+   }
+    
 

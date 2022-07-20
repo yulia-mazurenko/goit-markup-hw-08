@@ -5,6 +5,12 @@
     justify-content: space-between;
 
     @extend %list;
+
+    &__icon {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
 }
 
 .social__link {
@@ -24,17 +30,12 @@
         &:last-child {
                 margin-right: 0px;
             }
-            &__link:hover,
-            &__link:focus {
+            &:hover,
+            &:focus {
                 background-color: $accent-text-color;
                 color: $accent-white-color;
             }
-
-            &__icon {
-                width: 20px;
-                height: 20px;
-                fill: currentColor;
-            }
+            
 }
 
 .social__link--footer {

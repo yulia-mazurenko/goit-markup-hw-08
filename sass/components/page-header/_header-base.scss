@@ -17,16 +17,14 @@ position: relative;
 }
 
 .page-header__wrapper {
-  z-index: 99;
-  height: 100%;
-  // max-width: 480px;
-  // padding: 48px 0;
+  z-index: 9;
+  height: 100%; 
 
 @media screen and (max-width: 479px) {
-  max-width: 480px;
+  width: 100%;
 }
 
-@media screen and (min-width: $mobile) {
+@media screen and (min-width: $mobile) and (max-width: 767px){
   width: 480px;
 }
 
@@ -56,8 +54,7 @@ position: relative;
 .page-header__wrapper.is-open {
 
   @media screen and (max-width: 767px) {
-    transform: translateX(-50%);
-    z-index: 999;
+    transform: translateX(-50%);    
   }
 
 }

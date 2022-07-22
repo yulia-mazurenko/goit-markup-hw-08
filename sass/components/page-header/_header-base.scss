@@ -6,13 +6,10 @@ position: relative;
   &__item {
     @extend .container;
 
-    position: relative;
-
-    @media screen and (min-width: $tablet) {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }      
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+         
     }       
 }
 
@@ -58,3 +55,5 @@ position: relative;
   }
 
 }
+
+

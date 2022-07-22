@@ -19,6 +19,10 @@ body {
   letter-spacing: 0.03em;
 }
 
+body.is-open {
+  overflow: hidden;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -88,14 +92,9 @@ img {
   border-bottom: 1px solid #ececec;
 }
 .page-header__item {
-  position: relative;
-}
-@media screen and (min-width: 768px) {
-  .page-header__item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .page-header__wrapper {
@@ -207,9 +206,6 @@ img {
 }
 
 .button-menu {
-  position: absolute;
-  top: 22px;
-  right: 23px;
   z-index: 999;
   display: inline-block;
   margin: 0;
@@ -1049,8 +1045,11 @@ img {
     left: 50%;
     width: 450px;
     height: 609px;
+    opacity: 1;
     transform: translateX(-50%) scale(1);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: transform, opacity;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1059,24 +1058,30 @@ img {
     left: 50%;
     width: 528px;
     height: 581px;
+    opacity: 1;
     transform: translate(-50%, -50%) scale(1);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: transform, opacity;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
 @media screen and (max-width: 479px) {
   .backdrop.is-hidden .modal {
     transform: scale(1.1);
+    opacity: 0;
   }
 }
 @media screen and (min-width: 480px) {
   .backdrop.is-hidden .modal {
     transform: translateX(-50%) scale(1.1);
+    opacity: 0;
   }
 }
 @media screen and (min-width: 1200px) {
   .backdrop.is-hidden .modal {
     transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0;
   }
 }
 
@@ -1276,6 +1281,10 @@ img {
   margin-top: 30px;
   padding-left: 55px;
   padding-right: 55px;
+}
+
+body.modal-open {
+  overflow: hidden;
 }
 
 .portfolio__title {
